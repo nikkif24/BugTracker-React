@@ -91,7 +91,7 @@ return (
         exact
         render={(props) => (
           <>
-
+      <Note />
             {showAddTask && <AddTask onAdd={addTask} />}
             {tasks.length > 0 ? (
               
@@ -99,8 +99,7 @@ return (
                 tasks={tasks}
                 onDelete={deleteTask}
                 onToggle={toggleReminder}
-              /><Note />
-              <Note />
+              />
             ) : (
               'No Bugs to Fix'
             )}
