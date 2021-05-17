@@ -91,9 +91,10 @@ return (
         exact
         render={(props) => (
           <>
-            <Note />
+
             {showAddTask && <AddTask onAdd={addTask} />}
             {tasks.length > 0 ? (
+              <Note />
               <Tasks
                 tasks={tasks}
                 onDelete={deleteTask}
