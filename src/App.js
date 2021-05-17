@@ -94,7 +94,7 @@ return (
       
             {showAddTask && <AddTask onAdd={addTask} />}
             {tasks.length > 0 ? (
-              Double click to show "in progress" status with greens sidebar
+              'Double click to show "in progress" status with greens sidebar'
               <Tasks
                 tasks={tasks}
                 onDelete={deleteTask}
