@@ -1,4 +1,4 @@
-import { useState} from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
@@ -28,6 +28,17 @@ const toggleReminder = (id) => {
       )
   )
 }
+
+useEffect(() => {
+  const taskValues = window.localStorage.getItem('bug')
+  console.log(taskValues)
+  setTasks(JSON.parse(taskValues))
+}, [])
+
+useEffect(() => {
+  window.localStorage.setItem('bug', JSON.stringify(tasks))
+})
+
 
 return (
     <div className='container'>
